@@ -148,3 +148,39 @@ input[type="file"]::file-selector-button:hover {
   color: white;
   transform: scale(1.05);
 }
+
+/* Glassmorphism Upload Panel */
+.card-panel {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Question and Answer Separation */
+#card-question {
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+#card-answer {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  padding-top: 1.5rem;
+  border-top: 2px dashed #cbd5e1; /* The stylish divider line */
+  display: block;
+}
+
+/* Smooth Slide-In Animation for Cards */
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+#flashcard {
+  animation: slideUpFade 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}

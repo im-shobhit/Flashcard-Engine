@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Flashcard Engine</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ The Flashcard Engine</h1>
+            <p>Upload a PDF. Get smart, practice-ready flashcards instantly.</p>
+        </header>
+
+        <section id="upload-section" class="card-panel">
+            <input type="file" id="pdf-upload" accept="application/pdf" />
+            <button id="generate-btn">Generate Flashcards</button>
+            <p id="status-message"></p>
+        </section>
+
+        <section id="study-section" class="hidden">
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-inner" id="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h3 id="card-question">Loading question...</h3>
+                    </div>
+                    <div class="flashcard-back">
+                        <p id="card-answer">Loading answer...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn-flip" id="flip-btn">Flip Card</button>
+                <div id="spaced-rep-buttons" class="hidden">
+                    <button class="btn-hard" id="btn-hard">Hard</button>
+                    <button class="btn-good" id="btn-good">Good</button>
+                    <button class="btn-easy" id="btn-easy">Easy</button>
+                </div>
+            </div>
+            <p class="progress">Card <span id="current-index">1</span> of <span id="total-cards">0</span></p>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

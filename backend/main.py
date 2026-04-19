@@ -17,7 +17,7 @@ app.add_middleware(
 
 # --- IMPORTANT: PASTE YOUR API KEY HERE ---
 # Put your key inside the quotes below!
-API_KEY = os.getenv("AIzaSyBl2McwkEu00LKa28dtdR-ymNYkxXcAU6Y")
+API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
 # ------------------------------------------
 

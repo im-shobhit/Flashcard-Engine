@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             // Call the Python backend!
-            const response = await fetch("http://127.0.0.1:8000/generate", {
+            const response = await fetch("https://flashcard-engine-backend-pwib.onrender.com/generate", {
                 method: "POST",
                 body: formData
             });
